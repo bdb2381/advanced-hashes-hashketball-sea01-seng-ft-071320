@@ -251,7 +251,7 @@ def big_shoe_rebounds
   end #while do loop
 =end
 
- puts hash.max_by { |(k, v)| v[:shoe]}
+ puts hash.max_by { |(k, v)| [k, v]}
 
 
 
