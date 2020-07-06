@@ -162,7 +162,7 @@ end #end num_points_scored()
 def shoe_size(player_name)
 #takes in an argument of a player's name and returns the shoe size for that player.
   hash = game_hash()
-  
+
   player_stats = hash[:home][:players] + hash[:away][:players]
     player_stats.each do |name|
       if name[:player_name] == player_name
@@ -171,7 +171,7 @@ def shoe_size(player_name)
 
     end #end player_stats do loop
 
-      
+
   index = 0  #counter for moving through array players[] which is an array of hashes
 
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
