@@ -140,7 +140,7 @@ def num_points_scored(player_name)
       end #end if
    end #end player_stats do
 
-=begin...........alt longer method of getting the same result
+=begin ...........alt longer method of getting the same result
   index = 0  #counter for moving through array players[] which is an array of hashes
 
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
