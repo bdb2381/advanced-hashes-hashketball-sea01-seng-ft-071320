@@ -167,6 +167,7 @@ def shoe_size(player_name)
     player_stats.each do |name|
       if name[:player_name] == player_name
         return name[:shoe]
+        binding.pry
       end #end if
 
     end #end player_stats do loop
