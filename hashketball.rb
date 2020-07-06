@@ -166,8 +166,9 @@ def shoe_size(player_name)
   player_stats = hash[:home][:players] + hash[:away][:players]
     player_stats.each do |name|
       if name[:player_name] == player_name
-        return name[:shoe]
         binding.pry
+        return name[:shoe]
+        
       end #end if
 
     end #end player_stats do loop
