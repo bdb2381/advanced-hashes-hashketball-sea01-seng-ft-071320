@@ -138,7 +138,7 @@ def num_points_scored(player_name)
 
     player_stats.each do |name|                                   #for each player_name, loop through
        if name[:player_name] == player_name                       #if player_name = :player_name
-          return name[:points]                                   #return the :player_name's :points 
+          return name[:points]                                   #return the :player_name's :points
       end #end if
 
    end #end player_stats do
@@ -171,7 +171,7 @@ def shoe_size(player_name)
     player_stats.each do |name|                                 #for every name in player_stats
 
       if name[:player_name] == player_name                      #if names match, return the value of their :shoe size
-        return name[:shoe]                        
+        return name[:shoe]
       end #end if
 
     end #end player_stats do loop
@@ -211,7 +211,7 @@ end #end team_colors()
 
 def team_names ()
   #return array of team names....["Brooklyn Nets", "Charlotte Hornets"]
-  
+
   hash = game_hash()      #access the main data
   team_names_array = []   #create blank array
 
