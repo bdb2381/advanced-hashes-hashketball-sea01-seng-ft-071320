@@ -252,13 +252,12 @@ def big_shoe_rebounds
 =end
 
 
-all_player_data = {}
 
-# 1. Unify the data
+# 1. Combine the two hashes into one hash table to make it easier to compare
 all_player_data = hash[:home][:players] + hash[:away][:players]
 print all_player_data
 # 2. Extract the data you want
-#all_shoe_sizes_and_rebounds = all_player_data.map { |_id, player_data| [all_player_data[:shoe_size], all_player_data[:rebounds]] }
+all_shoe_sizes_and_rebounds = all_player_data.map { |index, player_stats| [player_stats[:shoe_size], player_stats[:rebounds]] }
 #puts all_shoe_sizes_and_rebounds
 binding.pry
 # 3. Filter the data
