@@ -185,7 +185,7 @@ def shoe_size(player_name)
 
     index += 1
   end #while do loop
-=end 
+=end
 end #end of shoe_size()
 
 
