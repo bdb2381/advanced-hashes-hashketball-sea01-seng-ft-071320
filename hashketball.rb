@@ -260,7 +260,7 @@ print all_player_data
 # 2. Extract the data you want
 all_shoe_sizes_and_rebounds = all_player_data.map { |_id, player_data| [all_player_data[:shoe_size], all_player_data[:rebounds]] }
 #puts all_shoe_sizes_and_rebounds
-#binding.pry
+binding.pry
 # 3. Filter the data
 max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
 
