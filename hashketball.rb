@@ -252,7 +252,7 @@ def big_shoe_rebounds
 =end
 
 
-
+all_player_data = {}
 
 # 1. Unify the data
 all_player_data = hash[:home][:players] + hash[:away][:players]
