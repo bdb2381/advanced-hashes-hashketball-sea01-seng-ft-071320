@@ -171,7 +171,7 @@ def shoe_size(player_name)
 
     end #end player_stats do loop
 
-
+=begin
   index = 0  #counter for moving through array players[] which is an array of hashes
 
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
@@ -184,7 +184,7 @@ def shoe_size(player_name)
 
     index += 1
   end #while do loop
-
+=end 
 end #end of shoe_size()
 
 
