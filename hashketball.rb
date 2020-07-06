@@ -138,7 +138,8 @@ def num_points_scored(player_name)
   player_stats = hash[:home][:players] + hash[:away][:players]
 
     player_stats.map do |name, points|
-       name[:players], points[:points]
+       name = name[:players]
+       points =  points[:points]
      end  
 
 binding.pry
