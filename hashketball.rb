@@ -138,9 +138,9 @@ def num_points_scored(player_name)
   player_stats = hash[:home][:players] + hash[:away][:players]
 
     player_stats.each do |name|
-       puts p_name = name[:player_name]
-       p_points = name[:points]
-      return p_points
+       if name[:player_name] == player_name
+          return p_points = name[:points]
+      end #end if
 #binding.pry
      end
 
