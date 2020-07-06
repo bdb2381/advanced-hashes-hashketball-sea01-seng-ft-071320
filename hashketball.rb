@@ -141,8 +141,7 @@ def num_points_scored(player_name)
        if name[:player_name] == player_name
           return p_points = name[:points]
       end #end if
-#binding.pry
-     end
+   end #end player_stats do 
 
 =begin
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
