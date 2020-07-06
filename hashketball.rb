@@ -245,6 +245,6 @@ def big_shoe_rebounds
   end
 
   player_with_largest_shoe[:rebounds]  #return the number of rebounds of the player with largest shoe size
-binding.pry
+#binding.pry
 
 end #end big_shoe_rebounds()
