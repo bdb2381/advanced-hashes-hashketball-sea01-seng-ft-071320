@@ -239,10 +239,10 @@ def big_shoe_rebounds
   player_with_largest_shoe = all_player_data.max do |first_player, second_player| #loop through with max, looking to see which :shoe is bigger, based on 1, 0, -1, max returns the hash of the largest shoe
     first_player[:shoe] <=> second_player[:shoe]
   end
+  binding.pry
 
 
   player_with_largest_shoe[:rebounds]
 
-binding.pry
 
 end #end big_shoe_rebounds()
