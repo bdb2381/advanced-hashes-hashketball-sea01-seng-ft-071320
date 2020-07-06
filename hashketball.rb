@@ -163,11 +163,12 @@ def shoe_size(player_name)
 #takes in an argument of a player's name and returns the shoe size for that player.
   hash = game_hash()
 
-  player_stats = hash[:home][:players] + hash[:away][:players]
-    player_stats.each do |name|
-      if name[:player_name] == player_name
-        return name[:shoe]
+  player_stats = hash[:home][:players] + hash[:away][:players]  #combine 2 arrays of hashes :players into one array of hashes
 
+    player_stats.each do |name|                                 #for every name in player_stats
+
+      if name[:player_name] == player_name                      #if names match, return the value of their :shoe size 
+        return name[:shoe]
       end #end if
 
     end #end player_stats do loop
