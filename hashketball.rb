@@ -140,7 +140,7 @@ def num_points_scored(player_name)
     player_stats.each do |name|
        p_name = name[:player_name]
        p_points = name[:points]
-      return p_name + p_points
+      return p_points
 binding.pry
      end
 
