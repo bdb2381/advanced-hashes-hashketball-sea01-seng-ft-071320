@@ -209,7 +209,7 @@ def team_names ()
   #["Brooklyn Nets", "Charlotte Hornets"]
   hash = game_hash()
   team_names_array = hash[:home][:team_names].to_a
-  team_names_array = hash[:away][:team_name].to_a
+  #team_names_array = hash[:away][:team_name].to_a
 =begin
   team_names_array = []
 
