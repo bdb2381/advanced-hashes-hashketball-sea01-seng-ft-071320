@@ -213,7 +213,7 @@ def team_names ()
   team_names_array = []
   team_names_array = hash[:home][:team_name] + hash[:away][:team_name]
   binding.pry
-=end 
+=end
 
   team_names_array = []
 
