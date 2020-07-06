@@ -263,10 +263,10 @@ end
 
 
  #Filter the data
-max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
+#max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
 
 # 4. Extract what you want
-max_shoe_size_and_rebounds[1]
+#max_shoe_size_and_rebounds[1]
 binding.pry
 
 
