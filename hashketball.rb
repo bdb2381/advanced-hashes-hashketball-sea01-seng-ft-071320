@@ -131,13 +131,16 @@ end
 def num_points_scored(player_name)
   #for every player in :home and :away, return [:points]
   #test if the player_name == to :home, :player_name elseif == to :away, :player
-  hash = game_hash()
 
-  player_stats = hash[:home][:players] + hash[:away][:players]
-    player_stats.each do |name|
-       if name[:player_name] == player_name
-          return p_points = name[:points]
+  hash = game_hash()  #access the main data
+
+  player_stats = hash[:home][:players] + hash[:away][:players]    #combine two arrays of :player into one array 
+  
+    player_stats.each do |name|                                   #for each player_name, loop through 
+       if name[:player_name] == player_name                       #if player_name = :player_name 
+          return name[:points]                         #return the :player_name's :points 
       end #end if
+
    end #end player_stats do
 
 =begin ...........alt longer method of getting the same result
@@ -161,7 +164,7 @@ end #end num_points_scored()
 
 def shoe_size(player_name)
 #takes in an argument of a player's name and returns the shoe size for that player.
-  hash = game_hash()
+  hash = game_hash()    #access the main data
 
   player_stats = hash[:home][:players] + hash[:away][:players]  #combine 2 arrays of hashes :players into one array of hashes
 
@@ -191,7 +194,7 @@ end #end of shoe_size()
 
 
 def team_colors(team_name)
-  hash = game_hash()
+  hash = game_hash()    #access the main data
 
   if hash[:home][:team_name] == team_name
     return hash[:home][:colors]
@@ -208,18 +211,12 @@ end #end team_colors()
 
 def team_names ()
   #["Brooklyn Nets", "Charlotte Hornets"]
-  hash = game_hash()
-  team_names_array = hash[:home][:team_name].to_a
-  #team_names_array = hash[:away][:team_name].to_a
-  binding.pry
-=begin
+  hash = game_hash()      #access the main data
   team_names_array = []
 
   team_names_array[0] = hash[:home][:team_name]
   team_names_array[1] =  hash[:away][:team_name]
 
-
-=end
   team_names_array
 end #end team_names()
 
@@ -229,7 +226,7 @@ def player_numbers(team_name)
   # loop through the team_name's hash, if team_name == team_name, finding the jersey numbers, adding jersey numbers into array
 
   team_numbers = []
-  hash = game_hash()
+  hash = game_hash()  #access the main data
 
     hash.each do |location_home_or_away, team_information|  #loop through hash, to find the key/value pair of home/away status and its matching team name
       if team_name == team_information[:team_name]        #compare the input of team_name to the key/value|key/value pair of :team_name, if match, execute next steps
