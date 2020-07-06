@@ -258,7 +258,7 @@ def big_shoe_rebounds
 all_player_data = hash[:home][:players] + hash[:away][:players]
 #puts all_player_data
 # 2. Extract the data you want
-all_shoe_sizes_and_rebounds = all_player_data.map { |_id, player_data| [all_player_data[:shoe_size], all_player_data[:rebounds]] }
+all_shoe_sizes_and_rebounds = all_player_data.map { |_id, player_data|, [all_player_data[:shoe_size], all_player_data[:rebounds]] }
 puts all_shoe_sizes_and_rebounds
 binding.pry
 # 3. Filter the data
