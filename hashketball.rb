@@ -259,7 +259,7 @@ all_player_data = hash[:home][:players] + hash[:away][:players]
 
 test = all_player_data.max do |first_player, second_player|
   first_player[:shoe] <=> second_player[:shoe]
-end 
+end
 
 
  Filter the data
