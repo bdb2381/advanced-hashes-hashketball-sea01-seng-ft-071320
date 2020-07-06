@@ -216,8 +216,9 @@ def team_names ()
   team_names_array[0] = hash[:home][:team_name]
   team_names_array[1] =  hash[:away][:team_name]
 
-  team_names_array
+
 =end
+  team_names_array
 end #end team_names()
 
 
