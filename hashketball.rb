@@ -257,16 +257,13 @@ def big_shoe_rebounds
 all_player_data = hash[:home][:players] + hash[:away][:players]
 #print all_player_data
 
-test = all_player_data.max do |first_player, second_player|
+player_with_largest_shoe = all_player_data.max do |first_player, second_player|
   first_player[:shoe] <=> second_player[:shoe]
 end
 
 
- #Filter the data
-#max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
+player_with_largest_shoe[:rebounds]
 
-# 4. Extract what you want
-#max_shoe_size_and_rebounds[1]
 binding.pry
 
 
