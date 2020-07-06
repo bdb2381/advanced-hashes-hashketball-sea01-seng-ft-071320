@@ -232,41 +232,17 @@ end #end player_stats()
 
 
 def big_shoe_rebounds
-  hash = game_hash()  #access the main data
-  shoe_size_holder = 0
-  index = 0
-=begin
-  find biggest shoe size in home
-  for game_hash[:home][:players][index].size, compare game_hash[:home][:players][index][:shoe] to shoe_size_holder.
-  if shoe_size_holder is bigger, compare against index+1
-  find biggest shoe size in away
+  #return the number of rebounds associated with the player that has the largest shoe size.
 
-  while index <  10 do
-    if game_hash[:home][:players][index][:shoe] > shoe_size_holder
-        shoe_size_holder = game_hash[:home][:players][index][:shoe]
-    end #end if
-    puts shoe_size_holder
-    index += 1
+  all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the two team hashes into one hash table to make it easier to compare
 
-  end #while do loop
-=end
+  player_with_largest_shoe = all_player_data.max do |first_player, second_player| #loop through with max, looking to see which :shoe is bigger, based on 1, 0, -1, max returns the hash of the largest shoe
+    first_player[:shoe] <=> second_player[:shoe]
+  end
 
 
+  player_with_largest_shoe[:rebounds]
 
-
-all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the two team hashes into one hash table to make it easier to compare
-
-player_with_largest_shoe = all_player_data.max do |first_player, second_player|
-  first_player[:shoe] <=> second_player[:shoe]
-  puts first_player
-
-end
-
-
-player_with_largest_shoe[:rebounds]
-
-
-
-
+binding.pry
 
 end #end big_shoe_rebounds()
