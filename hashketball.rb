@@ -258,8 +258,8 @@ all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the t
 
 player_with_largest_shoe = all_player_data.max do |first_player, second_player|
   first_player[:shoe] <=> second_player[:shoe]
-  puts first_player
-  puts second_player
+  #puts first_player
+  #puts second_player
 end
 
 
