@@ -257,7 +257,7 @@ def big_shoe_rebounds
 all_player_data = hash[:home][:players] + hash[:away][:players]
 #print all_player_data
 
-all_player_data.max do |first_player, second_player| 
+all_player_data.max do |first_player, second_player|
   first_player[:shoe] <=> second_player[:shoe]
 
  Filter the data
