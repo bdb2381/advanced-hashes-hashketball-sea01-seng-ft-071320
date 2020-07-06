@@ -144,7 +144,7 @@ def num_points_scored(player_name)
 binding.pry
      end
 
-
+=begin
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
     if hash[:away][:players][index][:player_name] == player_name    #find the away team player, and if there is a match, return the player's points
       return hash[:away][:players][index][:points]
@@ -155,6 +155,8 @@ binding.pry
 
     index+=1
   end #while do loop :away    #[:points]
+
+=end
 end #end num_points_scored()
 
 
