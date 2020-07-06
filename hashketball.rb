@@ -210,6 +210,7 @@ def team_names ()
   hash = game_hash()
   team_names_array = hash[:home][:team_names].to_a
   #team_names_array = hash[:away][:team_name].to_a
+  binding.pry
 =begin
   team_names_array = []
 
