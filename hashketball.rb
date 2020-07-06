@@ -208,7 +208,7 @@ end #end team_colors()
 def team_names ()
   #["Brooklyn Nets", "Charlotte Hornets"]
   hash = game_hash()
-  team_names_array = hash[:home][:team_names].to_a 
+  team_names_array = hash[:home][:team_names].to_a
   team_names_array = hash[:away][:team_name].to_a
 =begin
   team_names_array = []
@@ -217,7 +217,7 @@ def team_names ()
   team_names_array[1] =  hash[:away][:team_name]
 
   team_names_array
-=end 
+=end
 end #end team_names()
 
 
