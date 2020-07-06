@@ -209,7 +209,7 @@ end #end team_colors()
 def team_names ()
   #["Brooklyn Nets", "Charlotte Hornets"]
   hash = game_hash()
-  team_names = hash[:home][:team] + hash[:away][:team]
+  team_names = hash[:home][:team_name] + hash[:away][:team_name]
   binding.pry
 
 =begin
