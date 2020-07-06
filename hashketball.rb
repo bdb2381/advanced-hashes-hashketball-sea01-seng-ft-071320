@@ -135,6 +135,9 @@ def num_points_scored(player_name)
   index = 0  #counter for moving through array players[] which is an array of hashes
 
 
+  player_stats = hash[:home][:players] + hash[:away][:players] 
+  
+binding.pry
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
     if hash[:away][:players][index][:player_name] == player_name    #find the away team player, and if there is a match, return the player's points
       return hash[:away][:players][index][:points]
@@ -146,6 +149,7 @@ def num_points_scored(player_name)
     index+=1
   end #while do loop :away    #[:points]
 end #end num_points_scored()
+
 
 
 def shoe_size(player_name)
@@ -237,9 +241,9 @@ def big_shoe_rebounds
 
   hash = game_hash()  #access the main data
 
-  all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the two team hashes into one array of hashes  to make it easier to compare
+  all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine (concat) the two arrays hashes of players into one array of hashes to make it easier to compare
 
-  #loop through with max, looking to see which :shoe is bigger, based on 1, 0, -1, max returns the hash of the largest shoe
+  #loop through with max, look to see which :shoe is bigger, based on 1, 0, -1, max returns the hash of the largest shoe
   player_with_largest_shoe = all_player_data.max do |first_player, second_player|
     first_player[:shoe] <=> second_player[:shoe]
   end
