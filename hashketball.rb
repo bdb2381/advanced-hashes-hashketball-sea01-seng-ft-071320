@@ -253,14 +253,14 @@ def big_shoe_rebounds
 
 
 
-# 1. Combine the two hashes into one hash table to make it easier to compare
+ Combine the two hashes into one hash table to make it easier to compare
 all_player_data = hash[:home][:players] + hash[:away][:players]
 #print all_player_data
-# 2. Extract the data you want
-#all_shoe_sizes_and_rebounds = all_player_data.map { |index, player_stats| [player_stats[:shoe_size], player_stats[:rebounds] ]}
-#puts all_shoe_sizes_and_rebounds
 
-# 3. Filter the data
+all_player_data.max do |first_player, second_player| 
+  first_player[:shoe] <=> second_player[:shoe]
+
+ Filter the data
 max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
 
 # 4. Extract what you want
