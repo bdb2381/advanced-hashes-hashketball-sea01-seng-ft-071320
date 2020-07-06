@@ -239,7 +239,7 @@ def big_shoe_rebounds
 
   #all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the two team hashes into one array of hashes  to make it easier to compare
 all_player_data = hash[:home].merge(hash[:away])
-
+binding.pry
   #loop through with max, looking to see which :shoe is bigger, based on 1, 0, -1, max returns the hash of the largest shoe
   player_with_largest_shoe = all_player_data.max do |first_player, second_player|
     first_player[:shoe] <=> second_player[:shoe]
