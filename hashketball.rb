@@ -134,10 +134,10 @@ def num_points_scored(player_name)
 
   hash = game_hash()  #access the main data
 
-  player_stats = hash[:home][:players] + hash[:away][:players]    #combine two arrays of :player into one array 
-  
-    player_stats.each do |name|                                   #for each player_name, loop through 
-       if name[:player_name] == player_name                       #if player_name = :player_name 
+  player_stats = hash[:home][:players] + hash[:away][:players]    #combine two arrays of :player into one array
+
+    player_stats.each do |name|                                   #for each player_name, loop through
+       if name[:player_name] == player_name                       #if player_name = :player_name
           return name[:points]                         #return the :player_name's :points 
       end #end if
 
@@ -170,7 +170,7 @@ def shoe_size(player_name)
 
     player_stats.each do |name|                                 #for every name in player_stats
 
-      if name[:player_name] == player_name                      #if names match, return the value of their :shoe size 
+      if name[:player_name] == player_name                      #if names match, return the value of their :shoe size
         return name[:shoe]
       end #end if
 
