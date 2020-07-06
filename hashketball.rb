@@ -232,7 +232,8 @@ end #end player_stats()
 
 
 def big_shoe_rebounds
-  #return the number of rebounds associated with the player that has the largest shoe size.
+  #return the number of rebounds associated with the player that has the largest shoe size
+
 
   all_player_data = hash[:home][:players] + hash[:away][:players]   #Combine the two team hashes into one hash table to make it easier to compare
 
