@@ -138,7 +138,7 @@ def num_points_scored(player_name)
 
     player_stats.each do |name|                                   #for each player_name, loop through
        if name[:player_name] == player_name                       #if player_name = :player_name
-          return name[:points]                         #return the :player_name's :points 
+          return name[:points]                                   #return the :player_name's :points 
       end #end if
 
    end #end player_stats do
@@ -171,7 +171,7 @@ def shoe_size(player_name)
     player_stats.each do |name|                                 #for every name in player_stats
 
       if name[:player_name] == player_name                      #if names match, return the value of their :shoe size
-        return name[:shoe]
+        return name[:shoe]                        
       end #end if
 
     end #end player_stats do loop
@@ -210,9 +210,10 @@ end #end team_colors()
 
 
 def team_names ()
-  #["Brooklyn Nets", "Charlotte Hornets"]
+  #return array of team names....["Brooklyn Nets", "Charlotte Hornets"]
+  
   hash = game_hash()      #access the main data
-  team_names_array = []
+  team_names_array = []   #create blank array
 
   team_names_array[0] = hash[:home][:team_name]
   team_names_array[1] =  hash[:away][:team_name]
@@ -225,7 +226,7 @@ def player_numbers(team_name)
   #return player jersey numbers for a team
   # loop through the team_name's hash, if team_name == team_name, finding the jersey numbers, adding jersey numbers into array
 
-  team_numbers = []
+  team_numbers = []   #create blank array
   hash = game_hash()  #access the main data
 
     hash.each do |location_home_or_away, team_information|  #loop through hash, to find the key/value pair of home/away status and its matching team name
@@ -236,7 +237,7 @@ def player_numbers(team_name)
         end
     end #end hash.each do loop
 
-team_numbers.sort #return array numbers of the team passed in
+    team_numbers.sort #return array numbers of the team passed in
 end #player_numbers()
 
 
@@ -253,8 +254,8 @@ def player_stats(player_name)
 
         if player_name == index[:player_name]           #only at player_name level, if matching input, return the hash of player_name data
           return index
-
       end #end if
+
     end #team_information.each do
   end #end hash.each do
 
