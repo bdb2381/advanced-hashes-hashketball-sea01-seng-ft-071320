@@ -173,7 +173,7 @@ def shoe_size(player_name)
 
     end #end player_stats do loop
 
-=begin
+=begin ...........alt longer method of getting the same result
   index = 0  #counter for moving through array players[] which is an array of hashes
 
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
@@ -203,15 +203,20 @@ def team_colors(team_name)
 
 end #end team_colors()
 
+
+
+
 def team_names ()
   #["Brooklyn Nets", "Charlotte Hornets"]
   #hash = game_hash()
+=begin
   team_names_array = []
 
   team_names_array[0] = "Brooklyn Nets"
   team_names_array[1] =  "Charlotte Hornets"
 
   team_names_array
+=end 
 end #end team_names()
 
 
