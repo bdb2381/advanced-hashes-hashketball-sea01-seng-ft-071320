@@ -132,18 +132,17 @@ def num_points_scored(player_name)
   #for every player in :home and :away, return [:points]
   #test if the player_name == to :home, :player_name elseif == to :away, :player
   hash = game_hash()
-  index = 0  #counter for moving through array players[] which is an array of hashes
-
 
   player_stats = hash[:home][:players] + hash[:away][:players]
-
     player_stats.each do |name|
        if name[:player_name] == player_name
           return p_points = name[:points]
       end #end if
    end #end player_stats do 
 
-=begin
+=begin...........alt longer method of getting the same result 
+  index = 0  #counter for moving through array players[] which is an array of hashes
+
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
     if hash[:away][:players][index][:player_name] == player_name    #find the away team player, and if there is a match, return the player's points
       return hash[:away][:players][index][:points]
@@ -172,7 +171,7 @@ def shoe_size(player_name)
       return hash[:home][:players][index][:shoe]
     end #end if block
 
-    index+=1
+    index += 1
   end #while do loop
 
 end #end of shoe_size()
