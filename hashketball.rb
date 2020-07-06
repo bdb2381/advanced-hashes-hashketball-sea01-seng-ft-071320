@@ -211,7 +211,7 @@ def team_names ()
   hash = game_hash()
   team_names = hash[:home][:team] + hash[:away][:team]
   binding.pry
-  
+
 =begin
   team_names_array = []
 
@@ -219,7 +219,7 @@ def team_names ()
   team_names_array[1] =  "Charlotte Hornets"
 
   team_names_array
-=end 
+=end
 end #end team_names()
 
 
