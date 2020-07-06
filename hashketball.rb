@@ -140,9 +140,10 @@ def num_points_scored(player_name)
     player_stats.map do |name, points|
        name = name[:players]
        points =  points[:points]
+binding.pry
      end
 
-binding.pry
+
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
     if hash[:away][:players][index][:player_name] == player_name    #find the away team player, and if there is a match, return the player's points
       return hash[:away][:players][index][:points]
