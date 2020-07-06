@@ -135,8 +135,8 @@ def num_points_scored(player_name)
   index = 0  #counter for moving through array players[] which is an array of hashes
 
 
-  player_stats = hash[:home][:players] + hash[:away][:players] 
-  
+  player_stats = hash[:home][:players] + hash[:away][:players]
+
 binding.pry
   while index < hash[:away][:players][index].length || index < hash[:home][:players][index].length  do  #so long as index is less then the lenght of either array of the team's roster
     if hash[:away][:players][index][:player_name] == player_name    #find the away team player, and if there is a match, return the player's points
